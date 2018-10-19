@@ -3,7 +3,7 @@ Contributors: haet
 Tags: email template, html mail, email design, mail, email templates, ninja-forms, wp-e-commerce, caldera-forms, wp-e-commerce, easy-digital-downloads, woocommerce, contact-form-7, mandrill, postman, gravityforms
 Requires at least: 3.9
 Tested up to: 4.9.8
-Stable tag: 2.8.2
+Stable tag: 2.8.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,16 +18,17 @@ Turn email formatting on/off for specific plugins.
 Currently supported are
 
 * Ninja Forms
-* WP E-Commerce
 * Caldera Forms
 * Contact Form 7
 * Gravity Forms
+* Gravity Flow
 * WP Support Plus Responsive Ticket System
 * Birthday Emails
 * [WPForms and WPForms Lite](http://etzelstorfer.com/en/downloads/wp-html-mail-wpforms/)
 * [WooCommerce](http://etzelstorfer.com/en/downloads/wp-html-mail-woocommerce/)
 * [Easy Digital Downloads](http://etzelstorfer.com/en/downloads/wp-html-mail-easy-digital-downloads/)
 * [Give – Donation and Fundraising](https://wordpress.org/plugins/wp-html-mail-give/)
+* WP E-Commerce
 
 
 
@@ -92,6 +93,9 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 
 == Changelog ==
+
+= 2.8.3 = 
+* Improvements for Gravity Forms and Gravity Flow
 
 
 = 2.8.2 =
@@ -223,6 +227,12 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 = Can I send my newsletter campaigns with this plugin? =
 
 No, this is not a newsletter tool, it just makes your emails beautiful but doesn't send custom ones.
+
+
+= How can I remove the gap at the header of my Contact Form 7 emails? =
+
+Go to your Contact Form 7 email settings and change email type from HTML to text. WP HTML Mail will take care of the HTML.
+
 
 = Can a customize the HTML code of the email header? =
 

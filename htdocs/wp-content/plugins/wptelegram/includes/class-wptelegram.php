@@ -166,6 +166,18 @@ class WPTelegram {
 		 */
 		require_once WPTELEGRAM_DIR . '/public/class-wptelegram-public.php';
 
+		// PHP version must be at least 5.3
+		// for this to work
+		if ( version_compare( PHP_VERSION, '5.3.0', '>=' ) ) {
+
+			/**
+			 * The custom functions
+			 * 
+			 */
+			// require_once WPTELEGRAM_DIR . '/includes/custom-functions.php';
+
+		}
+
 		$this->loader = new WPTelegram_Loader();
 
 	}

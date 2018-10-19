@@ -1,10 +1,10 @@
-=== WP Telegram ===
+=== WP Telegram (Auto Post and Notifications) ===
 Contributors: manzoorwanijk
 Donate link: https://paypal.me/manzoorwanijk
 Tags: telegram, notifications, posts, channel, group
 Requires at least: 3.6
 Tested up to: 4.9.8
-Stable tag: 1.9.0
+Stable tag: 1.9.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -66,7 +66,7 @@ Many thanks to the translators for the great job!
 * [Oxford](http://radiowolf.ru) (Russian)
 * [jdellund](https://profiles.wordpress.org/jdellund) (Catalan)
 
-* Note: You can also contribute in translating this plugin into your local language. Join the Chat (above)
+Note: You can also contribute in translating this plugin into your local language. Join the Chat (above)
 
 
 == Installation ==
@@ -97,6 +97,18 @@ Many thanks to the translators for the great job!
 8. Post Edit Screen
 
 == Changelog ==
+
+= 1.9.3 =
+* Fixed the issue with Scheduled posts caused by previous update
+
+= 1.9.2 =
+* Fixed the issue of category/author filter for future posts
+* Added the filter to explicitly change the Inline URL Button text 
+
+= 1.9.1 =
+* Fixed the inline keyboard issue with image posts
+* Fixed the double posting problem due to some plugins
+* Other fixes
 
 = 1.9.0 =
 * Removed the API validation of bot token upon saving the settings

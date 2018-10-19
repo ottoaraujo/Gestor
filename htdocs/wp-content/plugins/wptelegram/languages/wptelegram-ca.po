@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Telegram 1.6.5\n"
-"POT-Creation-Date: 2018-09-23 20:40+0530\n"
-"PO-Revision-Date: 2018-09-23 20:40+0530\n"
+"POT-Creation-Date: 2018-10-08 17:51+0530\n"
+"PO-Revision-Date: 2018-10-08 17:56+0530\n"
 "Last-Translator: \n"
 "Language-Team: WPTelegram\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
@@ -348,10 +348,6 @@ msgstr "Només la Plantilla del Missatge"
 msgid "Miscellaneous"
 msgstr "Miscel·lània"
 
-#: admin/class-wptelegram-admin-settings.php:349
-msgid "of the link in text"
-msgstr "de l'enllaç en el text"
-
 #: admin/class-wptelegram-admin-settings.php:350
 msgid "Disable Notifications"
 msgstr "Desactiva les Notificacions"
@@ -666,10 +662,10 @@ msgstr "Cica per inserir"
 #: admin/class-wptelegram-admin-settings.php:667
 #, php-format
 msgid ""
-"Replace %s in %s by the name of the taxonomy from which you want to get the "
-"terms attached to the post."
+"Replace %1$s in %2$s by the name of the taxonomy from which you want to get "
+"the terms attached to the post."
 msgstr ""
-"Substitueix %s a %s pel nom de la taxonomia de la qual vols obtenir els "
+"Substitueix %1$s a %2$s pel nom de la taxonomia de la qual vols obtenir els "
 "elements adjunts a la publicació."
 
 #: admin/class-wptelegram-admin-settings.php:667
@@ -681,11 +677,11 @@ msgstr "Per exemple %s"
 #: admin/class-wptelegram-admin-settings.php:668
 #, php-format
 msgid ""
-"Replace %s in %s by the name of the Custom Field, the value of which you "
+"Replace %1$s in %2$s by the name of the Custom Field, the value of which you "
 "want to add to the template."
 msgstr ""
-"Substitueix %s a %s pel nom del Camp Personalitzat, el valor del qual vols "
-"afegir a la plantilla."
+"Substitueix %1$s a %2$s pel nom del Camp Personalitzat, el valor del qual "
+"vols afegir a la plantilla."
 
 #: admin/class-wptelegram-admin-settings.php:769
 msgid "Override default settings"
@@ -866,28 +862,3 @@ msgstr "Escriu la chat_id que has rebut al camp anterior"
 #, php-format
 msgid "Also start a conversation with %s to receive notifications"
 msgstr "També inicia una conversa amb %s per rebre notificacions"
-
-#~ msgid "User can enter the Telegram information on %sprofile%s page"
-#~ msgstr ""
-#~ "L'usuari pot escriure la informació de Telegram a la pàgina de %sprofile%s"
-
-#~ msgid "Your host seems to block requests to %s"
-#~ msgstr "El teu servidor sembla que està bloquejant peticions a %s"
-
-#~ msgid ""
-#~ "Get notifications and send posts automatically to Telegram when published "
-#~ "or updated, whether to a Telegram Channel, Group, Supergroup or private "
-#~ "chat, with full control..."
-#~ msgstr ""
-#~ "Obtén notificacions i envia publicacions automàticament a Telegram quan "
-#~ "es publiqui o s'actualitzi, ja sigui a un Canal, Supergrup o conversa "
-#~ "privada de Telegram, amb control total ..."
-
-#~ msgid "https://t.me/manzoorwanijk"
-#~ msgstr "https://t.me/manzoorwanijk"
-
-#~ msgid "Manzoor Wani"
-#~ msgstr "Manzoor Wani"
-
-#~ msgid "https://t.me/WPTelegram"
-#~ msgstr "https://t.me/WPTelegram"

@@ -3,14 +3,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Telegram 1.6.3\n"
-"POT-Creation-Date: 2018-09-23 20:39+0530\n"
+"POT-Creation-Date: 2018-10-08 17:51+0530\n"
 "PO-Revision-Date: 2017-09-03 01:42+0530\n"
 "Last-Translator: \n"
 "Language-Team: WPTelegram\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
@@ -330,10 +330,6 @@ msgstr ""
 msgid "Miscellaneous"
 msgstr ""
 
-#: admin/class-wptelegram-admin-settings.php:349
-msgid "of the link in text"
-msgstr ""
-
 #: admin/class-wptelegram-admin-settings.php:350
 msgid "Disable Notifications"
 msgstr ""
@@ -627,8 +623,8 @@ msgstr ""
 #: admin/class-wptelegram-admin-settings.php:667
 #, php-format
 msgid ""
-"Replace %s in %s by the name of the taxonomy from which you want to get the "
-"terms attached to the post."
+"Replace %1$s in %2$s by the name of the taxonomy from which you want to get "
+"the terms attached to the post."
 msgstr ""
 
 #: admin/class-wptelegram-admin-settings.php:667
@@ -640,7 +636,7 @@ msgstr ""
 #: admin/class-wptelegram-admin-settings.php:668
 #, php-format
 msgid ""
-"Replace %s in %s by the name of the Custom Field, the value of which you "
+"Replace %1$s in %2$s by the name of the Custom Field, the value of which you "
 "want to add to the template."
 msgstr ""
 

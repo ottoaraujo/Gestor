@@ -40,49 +40,49 @@ final class Haet_Mail {
 
 	function get_default_theme_options() {	
 		return array(
-            'background'			=>	'#ffffff',
-            'contentbackground'		=>	'#FFFFFF',
-            'headertext' 			=> 	get_bloginfo('name'),
-            'headerfont'			=>	'Georgia,Times New Roman,serif',
-            'headeralign'			=> 	'right',
-            'headerfontsize'		=>	40,
-            'headerbold'			=>	0,
-            'headeritalic'			=>	1,
-            'headerbackground'		=>	'#28717f',
-            'headercolor'			=>	'#ffffff',
-            'headerpaddingtop'		=>	50,
-            'headerpaddingright'	=> 	24,
-            'headerpaddingbottom'	=>	12,
-            'headerpaddingleft'		=>	24,
-            'headerimg'				=>	'',
-            'headerimg_width'		=>	'',
-            'headerimg_height'		=>	'',
-            'headlinefont'			=>	'Georgia,Times New Roman,serif',
-            'headlinealign'			=> 	'left',
-            'headlinefontsize'		=>	25,
-            'headlinebold'			=>	0,
-            'headlineitalic'		=>	1,
-            'headlinecolor'			=>	'#2d8496',
-            'subheadlinefont'		=>	'Georgia,Times New Roman,serif',
-            'subheadlinealign'		=> 	'left',
-            'subheadlinefontsize'	=>	20,
-            'subheadlinebold'		=>	0,
-            'subheadlineitalic'		=>	1,
-            'subheadlinecolor'		=>	'#28717f',
-            'textfont'				=>	'Helvetica, Arial, sans-serif',
-            'textalign'				=> 	'left',
-            'textfontsize'			=>	14,
-            'textbold'				=>	0,
-            'textitalic'			=>	0,
-            'textcolor'				=>	'#878787',
-            'linkcolor'				=>	'#777777',
-            'linkbold'				=>	0,
-            'linkitalic'			=>	0,
-            'linkunderline'			=>	1,
-            'footer'				=> 	'<p>&nbsp;</p>
+			'background'			=>	'#ffffff',
+			'contentbackground'		=>	'#FFFFFF',
+			'headertext' 			=> 	get_bloginfo('name'),
+			'headerfont'			=>	'Georgia,Times New Roman,serif',
+			'headeralign'			=> 	'right',
+			'headerfontsize'		=>	40,
+			'headerbold'			=>	0,
+			'headeritalic'			=>	1,
+			'headerbackground'		=>	'#28717f',
+			'headercolor'			=>	'#ffffff',
+			'headerpaddingtop'		=>	50,
+			'headerpaddingright'	=> 	24,
+			'headerpaddingbottom'	=>	12,
+			'headerpaddingleft'		=>	24,
+			'headerimg'				=>	'',
+			'headerimg_width'		=>	'',
+			'headerimg_height'		=>	'',
+			'headlinefont'			=>	'Georgia,Times New Roman,serif',
+			'headlinealign'			=> 	'left',
+			'headlinefontsize'		=>	25,
+			'headlinebold'			=>	0,
+			'headlineitalic'		=>	1,
+			'headlinecolor'			=>	'#2d8496',
+			'subheadlinefont'		=>	'Georgia,Times New Roman,serif',
+			'subheadlinealign'		=> 	'left',
+			'subheadlinefontsize'	=>	20,
+			'subheadlinebold'		=>	0,
+			'subheadlineitalic'		=>	1,
+			'subheadlinecolor'		=>	'#28717f',
+			'textfont'				=>	'Helvetica, Arial, sans-serif',
+			'textalign'				=> 	'left',
+			'textfontsize'			=>	14,
+			'textbold'				=>	0,
+			'textitalic'			=>	0,
+			'textcolor'				=>	'#878787',
+			'linkcolor'				=>	'#777777',
+			'linkbold'				=>	0,
+			'linkitalic'			=>	0,
+			'linkunderline'			=>	1,
+			'footer'				=> 	'<p>&nbsp;</p>
 <p style="text-align: center;"><span style="color: #d6d6d6;"><span style="font-family: Helvetica, Arial, sans-serif;"><span style="font-size: 12px;">Sample Footer text: © 2017 Acme, Inc.<br /></span><span style="font-size: 12px;"><strong>Acme, Inc.<br /></strong></span><span style="font-size: 12px;">123 Main St., </span></span><span style="font-size: 12px; font-family: Helvetica, Arial, sans-serif;">Springfield, MA 12345</span></span><br /><span style="font-size: 12px; font-family: Helvetica, Arial, sans-serif; color: #d6d6d6;"><a href="http://www.acme-inc.com"><span style="color: #d6d6d6;">www.acme-inc.com</span></a></span></p>',
-            'footerlink'			=>	1,
-            'footerbackground'		=>	'#28717f',
+			'footerlink'			=>	1,
+			'footerbackground'		=>	'#28717f',
 		);
 	}
 
@@ -112,47 +112,47 @@ final class Haet_Mail {
 		return $options;
 	}
 	
-    function admin_page_scripts_and_styles($page){
-    	if(strpos($page, 'wp-html-mail')){
-	        wp_enqueue_style( 'wp-color-picker' );
-	        wp_enqueue_script('haet_mail_admin_script',  HAET_MAIL_URL.'/js/admin_script.js', array( 'wp-color-picker','jquery-ui-dialog','jquery'));
-	        wp_enqueue_style('haet_mail_admin_style',  HAET_MAIL_URL.'/css/style.css');
-	        wp_enqueue_style (  'wp-jquery-ui-dialog');
-	        wp_enqueue_media();
-	    }
-    }
+	function admin_page_scripts_and_styles($page){
+		if(strpos($page, 'wp-html-mail')){
+			wp_enqueue_style( 'wp-color-picker' );
+			wp_enqueue_script('haet_mail_admin_script',  HAET_MAIL_URL.'/js/admin_script.js', array( 'wp-color-picker','jquery-ui-dialog','jquery'));
+			wp_enqueue_style('haet_mail_admin_style',  HAET_MAIL_URL.'/css/style.css');
+			wp_enqueue_style (  'wp-jquery-ui-dialog');
+			wp_enqueue_media();
+		}
+	}
 
 
-    function admin_page() {
-        add_options_page( __('Email','wp-html-mail'), __('Email template','wp-html-mail'), 'manage_options', 'wp-html-mail', array(&$this, 'print_admin_page') );
-    }
+	function admin_page() {
+		add_options_page( __('Email','wp-html-mail'), __('Email template','wp-html-mail'), 'manage_options', 'wp-html-mail', array(&$this, 'print_admin_page') );
+	}
 
 
 
 
-    private function process_admin_page_actions(){
-    	do_action( 'haet_mail_plugin_reset_actions' );
+	private function process_admin_page_actions(){
+		do_action( 'haet_mail_plugin_reset_actions' );
 
-    	if( array_key_exists( 'advanced-action', $_GET ) ){
-    		switch ($_GET['advanced-action']) {
-    			case 'delete-design':
-    				delete_option('haet_mail_theme_options');
-    				echo '<div class="updated"><p><strong>';
-    						_e('Settings deleted.', 'wp-html-mail');
-    				echo '</strong></p></div>';	
-    				break;
+		if( array_key_exists( 'advanced-action', $_GET ) ){
+			switch ($_GET['advanced-action']) {
+				case 'delete-design':
+					delete_option('haet_mail_theme_options');
+					echo '<div class="updated"><p><strong>';
+							_e('Settings deleted.', 'wp-html-mail');
+					echo '</strong></p></div>';	
+					break;
 
-    			case 'delete-all':
-    				delete_option('haet_mail_theme_options');
-    				delete_option('haet_mail_options');
-    				delete_option('haet_mail_plugin_options');
-    				echo '<div class="updated"><p><strong>';
-    						_e('Settings deleted.', 'wp-html-mail');
-    				echo '</strong></p></div>';	
-    				break;
-    		}
-    	}
-    }
+				case 'delete-all':
+					delete_option('haet_mail_theme_options');
+					delete_option('haet_mail_options');
+					delete_option('haet_mail_plugin_options');
+					echo '<div class="updated"><p><strong>';
+							_e('Settings deleted.', 'wp-html-mail');
+					echo '</strong></p></div>';	
+					break;
+			}
+		}
+	}
 
 
 
@@ -232,22 +232,22 @@ final class Haet_Mail {
 		$template = $this->prepare_email_for_delivery($template);
 
 		$tabs = array(
-    		'general' 	=>  __('General','wp-html-mail'),
-	    	'header' 	=>  __('Header','wp-html-mail'),
-	        'content' 	=>  __('Content','wp-html-mail')
-	    );
+			'general' 	=>  __('General','wp-html-mail'),
+			'header' 	=>  __('Header','wp-html-mail'),
+			'content' 	=>  __('Content','wp-html-mail')
+		);
 		foreach ($active_plugins as $plugin) {
 			if ( method_exists( $plugin['class'], 'settings_tab' ) )
 				$tabs[ $plugin['name'] ] =  $plugin['display_name'];
 		}
 
-	    $tabs['footer']		=  __('Footer','wp-html-mail');
-	    $tabs['plugins']	=  __('Plugins','wp-html-mail');
-	    
-	    // removed after 2.7.3 because custom templates caused confusion
-	    // added again in 2.8 to add "settings reset" buttons
-	    $tabs['advanced']	=  __('Advanced','wp-html-mail');
-	    
+		$tabs['footer']		=  __('Footer','wp-html-mail');
+		$tabs['plugins']	=  __('Plugins','wp-html-mail');
+		
+		// removed after 2.7.3 because custom templates caused confusion
+		// added again in 2.8 to add "settings reset" buttons
+		$tabs['advanced']	=  __('Advanced','wp-html-mail');
+		
 		include HAET_MAIL_PATH.'views/admin/settings.php';
 	
 	}
@@ -332,10 +332,15 @@ final class Haet_Mail {
 		else
 			$use_template = $sender_plugin->use_template();
 
-		// $email['message'].='<pre>=====POST:'.print_r($_POST,true).'</pre>';
-		// $email['message'].='<pre>=====GET:'.print_r($_GET,true).'</pre>';
-		// $email['message'].='SENDER-PLUGIN: <pre>'.print_r($sender_plugin,true).'</pre><br>';
-		// $email['message'].='ACTIVE-PLUGINS: <pre>'.print_r(Haet_Sender_Plugin::get_active_plugins(),true).'</pre><br>';
+		// $debug = 'DEBUG<br>';
+		// $debug .= '<pre>=====POST:'.print_r($_POST,true).'</pre>';
+		// $debug .= '<pre>=====GET:'.print_r($_GET,true).'</pre>';
+		// $debug .= 'SENDER-PLUGIN: <pre>'.print_r($sender_plugin,true).'</pre><br>';
+		// $debug .= 'ACTIVE-PLUGINS: <pre>'.print_r(Haet_Sender_Plugin::get_active_plugins(),true).'</pre><br>';
+		// if( strpos( $email['message'], '</body>' ) !== false )
+		// 	$email['message'] = str_replace( '</body>', $debug, $email['message'] );
+		// else
+		// 	$email['message'] .= $debug;
 
 		$use_template = apply_filters( 'haet_mail_use_template', $use_template, array('to' => $email['to'], 'subject' => $email['subject'], 'message' => $email['message'], 'headers' => $email['headers'], 'attachments' => $email['attachments'], 'sender_plugin' => ($sender_plugin?$sender_plugin->get_plugin_name():null)) );
 

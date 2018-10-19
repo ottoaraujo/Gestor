@@ -107,14 +107,18 @@ class WPTelegram_Post_Handler {
 
 		$classic_screen = (bool) apply_filters( 'wptelegram_classic_post_edit_screen', true, $post );
 
-		// if the post is published/updated via WP-CLI
-		$is_cli = ( defined( 'WP_CLI' ) && WP_CLI );
+		// if the post is published/updated using WP CRON
+		$is_cron = ( defined( 'DOING_CRON' ) && DOING_CRON );
 
 		// if the post is published/updated via WP REST API
 		$is_rest = ( defined( 'REST_REQUEST' ) && REST_REQUEST );
-	    $is_cron = ( defined( 'DOING_CRON' ) && DOING_CRON );
 
-		if ( 'on' == $post_edit_switch && $classic_screen && ! $is_cli && ! $is_rest && ! $is_cron ) {
+		// if the post is published/updated via WP-CLI
+		$is_cli = ( defined( 'WP_CLI' ) && WP_CLI );
+
+		$is_cron_rest_or_cli = $is_cron || $is_rest || $is_cli;
+
+		if ( 'on' == $post_edit_switch && $classic_screen && ! $is_cron_rest_or_cli ) {
 			// Check for nonce
 		    if ( ! isset( $_POST['wptelegram_meta_box_nonce'] ) ) {
 		    	return;
@@ -132,7 +136,10 @@ class WPTelegram_Post_Handler {
 	    if ( wp_is_post_revision( $post_id ) ) {
 	    	return;
 	    }
-	    if ( ! $is_cron && ! $is_cli ) {
+
+		$is_cron_or_cli = $is_cron || $is_cli;
+
+	    if ( ! $is_cron_or_cli ) {
 	    	// allow custom code to control authentication
 	    	$user_has_permission = apply_filters( 'wptelegram_current_user_has_permission', false, $this->post );
 
@@ -242,17 +249,20 @@ class WPTelegram_Post_Handler {
 	 * @param $post     WP_Post
 	 */
 	public function handle_future_to_publish( $post ) {
+
+		do_action( 'wptelegram_post_init', $post );
+
 		$this->post = $post;
 		$send_message = get_post_meta( $post->ID, 'wptelegram_send_message', true );
-		if ( 'yes' != $send_message ) {
+		if ( 'yes' !== $send_message ) {
 			$send_message = false;
 		}
 
 		$template = $this->get_message_template( $post, 'postmeta' );
 		$send_featured_image = $this->options['message']['send_featured_image'];
 		
-		if ( ! $template && ( 'on' != $send_featured_image || ! has_post_thumbnail( $post_id )) ) {
-			return;
+		if ( ! $template && ( 'on' != $send_featured_image || ! has_post_thumbnail( $post->ID )) ) {
+			$send_message = false;
 		}
 		if ( ! $template ) {
 			$send_message = false;
@@ -266,6 +276,8 @@ class WPTelegram_Post_Handler {
 			return;
 		}
 		$this->prepare_message( $post, $post->ID, $template );
+
+		do_action( 'wptelegram_post_finish', $post );
 	}
 
 	/**
@@ -762,8 +774,11 @@ class WPTelegram_Post_Handler {
 
 		if ( 'on' == $inline_url_button ) {
 
+			$text = '🔗 ' . $inline_button_text;
+			$text = (string) apply_filters( 'wptelegram_post_inline_url_button_text', $text, $inline_button_text, $this->post, $method_params );
+
 			$inline_keyboard[][] = array(
-				'text'	=> '🔗 ' . $inline_button_text,
+				'text'	=> $text,
 				'url'	=> urldecode_deep( get_permalink( $this->post ) ),
 			);
 
@@ -779,7 +794,7 @@ class WPTelegram_Post_Handler {
 				end( $method_params );
 				$method = key( $method_params );
 
-				$method_params[ $kmethodey ]['reply_markup'] = $reply_markup;
+				$method_params[ $method ]['reply_markup'] = $reply_markup;
 			}
 		}
 	}

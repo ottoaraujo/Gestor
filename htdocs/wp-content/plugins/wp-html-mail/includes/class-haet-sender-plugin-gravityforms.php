@@ -5,7 +5,7 @@
 **/
 class Haet_Sender_Plugin_GravityForms extends Haet_Sender_Plugin {
     public function __construct($mail) {
-        if( !array_key_exists('gform_submit', $_POST) && !array_key_exists( 'gform_send_resume_link', $_POST) && !array_key_exists( 'gf_resend_notifications', $_POST) )
+        if( strpos( $mail['message'], '<!-- [IS GRAVITY EMAIL] -->' ) === false )
             throw new Haet_Different_Plugin_Exception();
     }
 
@@ -23,6 +23,8 @@ class Haet_Sender_Plugin_GravityForms extends Haet_Sender_Plugin {
 
         if( array_key_exists('gform_submit', $_POST) )
             $content = wpautop( $content );
+
+        $content = str_replace( '<!-- [IS GRAVITY EMAIL] -->', '', $content );
         return $content;
     }
 
@@ -42,4 +44,17 @@ class Haet_Sender_Plugin_GravityForms extends Haet_Sender_Plugin {
         return $message;
     }  
 
+
+    public static function plugin_actions_and_filters(){
+        // add a comment to message body to detect gravity forms emails later
+        add_filter( 'gform_pre_send_email', function( $email ){
+            if( strpos( $email['message'], '</body>' ) !== false )
+                $email['message'] = str_replace( '</body>', '<!-- [IS GRAVITY EMAIL] --></body>', $email['message'] );
+            else
+                $email['message'] .= '<!-- [IS GRAVITY EMAIL] -->';
+
+            error_log( $email['message'] );
+            return $email;
+        });
+    }
 }

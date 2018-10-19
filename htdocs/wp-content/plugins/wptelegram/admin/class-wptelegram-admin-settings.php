@@ -346,7 +346,7 @@ class WPTelegram_Admin_Settings {
                     'desc'    => '',
                     'type'    => 'multicheck',
                     'options' => array(
-                        'disable_web_page_preview' => __( 'Disable Web Page Preview', 'wptelegram' ) . ' (' . __( 'of the link in text', 'wptelegram' ) . ')',
+                        'disable_web_page_preview' => __( 'Disable Web Page Preview', 'wptelegram' ),
                         'disable_notification'     => __( 'Disable Notifications', 'wptelegram' ),
                         'no_message_as_reply'     => __( 'Do not send the second message as a reply to the first', 'wptelegram' ),
                     ),
@@ -664,8 +664,8 @@ class WPTelegram_Admin_Settings {
 			<p>
 				<span><strong>' . esc_html__( 'Note:', 'wptelegram' ) .'</strong></span>
 				<ol>
-                    <li>' . sprintf( esc_html__( 'Replace %s in %s by the name of the taxonomy from which you want to get the terms attached to the post.', 'wptelegram' ), '<code>taxonomy</code>', '<code>{[taxonomy]}</code>' ) . '&nbsp;' . sprintf( esc_html__( 'For example %s', 'wptelegram' ), '<code>{[genre]}</code>' ) . '</li>
-                    <li>' . sprintf( esc_html__( 'Replace %s in %s by the name of the Custom Field, the value of which you want to add to the template.', 'wptelegram' ), '<code>custom_field</code>', '<code>{[[custom_field]]}</code>' ) . '&nbsp;' . sprintf( esc_html__( 'For example %s', 'wptelegram' ), '<code>{[rtl_title]}</code>' ) . '</li>
+                    <li>' . sprintf( esc_html__( 'Replace %1$s in %2$s by the name of the taxonomy from which you want to get the terms attached to the post.', 'wptelegram' ), '<code>taxonomy</code>', '<code>{[taxonomy]}</code>' ) . '&nbsp;' . sprintf( esc_html__( 'For example %s', 'wptelegram' ), '<code>{[genre]}</code>' ) . '</li>
+                    <li>' . sprintf( esc_html__( 'Replace %1$s in %2$s by the name of the Custom Field, the value of which you want to add to the template.', 'wptelegram' ), '<code>custom_field</code>', '<code>{[[custom_field]]}</code>' ) . '&nbsp;' . sprintf( esc_html__( 'For example %s', 'wptelegram' ), '<code>{[rtl_title]}</code>' ) . '</li>
 				</ol>
 			</p>';
 			return $html;

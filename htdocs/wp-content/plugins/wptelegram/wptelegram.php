@@ -10,7 +10,7 @@
  * Plugin Name:       WP Telegram
  * Plugin URI:        https://t.me/WPTelegram
  * Description:       Get notifications and send posts automatically to Telegram when published or updated, whether to a Telegram Channel, Group, Supergroup or private chat, with full control...
- * Version:           1.9.0
+ * Version:           1.9.3
  * Author:            Manzoor Wani
  * Author URI:        https://t.me/manzoorwanijk
  * License:           GPL-2.0+
@@ -24,7 +24,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'WPTELEGRAM_VER', '1.9.0' );
+define( 'WPTELEGRAM_VER', '1.9.3' );
 
 define( 'WPTELEGRAM_BASENAME', plugin_basename( __FILE__ ) );
 

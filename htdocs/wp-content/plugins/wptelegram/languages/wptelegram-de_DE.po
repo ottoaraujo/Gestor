@@ -3,15 +3,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Telegram 1.6.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-23 20:40+0530\n"
-"PO-Revision-Date: 2018-09-23 20:40+0530\n"
+"POT-Creation-Date: 2018-10-08 17:52+0530\n"
+"PO-Revision-Date: 2018-10-08 17:57+0530\n"
 "Last-Translator: Robert Skiba <info@skibamedia.de>\n"
 "Language-Team: Deutsch\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __;_e;_x;esc_attr__;esc_attr_e;esc_html__;esc_html_e\n"
@@ -354,10 +354,6 @@ msgstr "Nur Nachrichtenvorlage"
 msgid "Miscellaneous"
 msgstr "Sonstige Einstellungen"
 
-#: admin/class-wptelegram-admin-settings.php:349
-msgid "of the link in text"
-msgstr "Einblendung der Vorschau, falls ein Link im Text konfiguriert ist"
-
 #: admin/class-wptelegram-admin-settings.php:350
 msgid "Disable Notifications"
 msgstr "Benachrichtigungen deaktivieren"
@@ -693,11 +689,11 @@ msgstr "Auf Makro klicken zum einzufügen"
 #: admin/class-wptelegram-admin-settings.php:667
 #, php-format
 msgid ""
-"Replace %s in %s by the name of the taxonomy from which you want to get the "
-"terms attached to the post."
+"Replace %1$s in %2$s by the name of the taxonomy from which you want to get "
+"the terms attached to the post."
 msgstr ""
-"%s im Makro %s durch den Namen der Taxonomie ersetzen, von der die Begriffe "
-"genommen werden sollen die dem Beitrag angefügt werden."
+"%1$s im Makro %2$s durch den Namen der Taxonomie ersetzen, von der die "
+"Begriffe genommen werden sollen die dem Beitrag angefügt werden."
 
 #: admin/class-wptelegram-admin-settings.php:667
 #: admin/class-wptelegram-admin-settings.php:668
@@ -708,10 +704,10 @@ msgstr "Zum Beispiel %s"
 #: admin/class-wptelegram-admin-settings.php:668
 #, php-format
 msgid ""
-"Replace %s in %s by the name of the Custom Field, the value of which you "
+"Replace %1$s in %2$s by the name of the Custom Field, the value of which you "
 "want to add to the template."
 msgstr ""
-"%s im Makro %s durch den Namen des benutzerdefinierten Feldes ersetzen, "
+"%1$s im Makro %2$s durch den Namen des benutzerdefinierten Feldes ersetzen, "
 "dessen Wert eingefügt werden soll. "
 
 #: admin/class-wptelegram-admin-settings.php:769
@@ -895,11 +891,3 @@ msgstr "Gib die erhaltene chat_id in das obige Feld ein"
 msgid "Also start a conversation with %s to receive notifications"
 msgstr ""
 "Starte außerdem eine Konversation mit %s, um Benachrichtigungen zu erhalten"
-
-#~ msgid "User can enter the Telegram information on %sprofile%s page"
-#~ msgstr ""
-#~ "Falls aktiv, können Nutzer die Benachrichtigung über Telegram auf ihrer "
-#~ "%sProfilseite%s konfigurieren."
-
-#~ msgid "Your host seems to block requests to %s"
-#~ msgstr "Dein Host scheint Anfragen zu %s zu blockieren"

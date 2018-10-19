@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Telegram 1.6.3\n"
-"POT-Creation-Date: 2018-09-23 20:41+0530\n"
-"PO-Revision-Date: 2018-09-23 20:41+0530\n"
+"POT-Creation-Date: 2018-10-08 17:53+0530\n"
+"PO-Revision-Date: 2018-10-08 17:57+0530\n"
 "Last-Translator: \n"
 "Language-Team: WPTelegram\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
@@ -345,10 +345,6 @@ msgstr "Только Шаблон сообщения"
 msgid "Miscellaneous"
 msgstr "Дополнительные"
 
-#: admin/class-wptelegram-admin-settings.php:349
-msgid "of the link in text"
-msgstr "ссылки в тексте"
-
 #: admin/class-wptelegram-admin-settings.php:350
 msgid "Disable Notifications"
 msgstr "Отключить уведомления"
@@ -664,11 +660,11 @@ msgstr "Нажмите для вставки"
 #: admin/class-wptelegram-admin-settings.php:667
 #, php-format
 msgid ""
-"Replace %s in %s by the name of the taxonomy from which you want to get the "
-"terms attached to the post."
+"Replace %1$s in %2$s by the name of the taxonomy from which you want to get "
+"the terms attached to the post."
 msgstr ""
-"Замените %s в %s на имя таксономии, из которой вы хотите получить условия, "
-"прикрепленные к сообщению."
+"Замените %1$s в %2$s на имя таксономии, из которой вы хотите получить "
+"условия, прикрепленные к сообщению."
 
 #: admin/class-wptelegram-admin-settings.php:667
 #: admin/class-wptelegram-admin-settings.php:668
@@ -679,10 +675,10 @@ msgstr "Для примера %s"
 #: admin/class-wptelegram-admin-settings.php:668
 #, php-format
 msgid ""
-"Replace %s in %s by the name of the Custom Field, the value of which you "
+"Replace %1$s in %2$s by the name of the Custom Field, the value of which you "
 "want to add to the template."
 msgstr ""
-"Замените %s в %s на имя настраиваемого поля, значение которого вы хотите "
+"Замените %1$s в %2$s на имя настраиваемого поля, значение которого вы хотите "
 "добавить в шаблон."
 
 #: admin/class-wptelegram-admin-settings.php:769
@@ -714,10 +710,8 @@ msgid "No Channels/Chat IDs found"
 msgstr "Нет найденных каналов/чат идентификаторов"
 
 #: admin/class-wptelegram-admin-settings.php:810
-#, fuzzy
-#| msgid "Send Test"
 msgid "Send file(s)"
-msgstr "Тестировать"
+msgstr "Отправить файлы"
 
 #: admin/class-wptelegram-admin-settings.php:818
 msgid "Add"
@@ -865,10 +859,3 @@ msgstr "Введите полученный чат ID в поле выше"
 #, php-format
 msgid "Also start a conversation with %s to receive notifications"
 msgstr "Также запустите разговор с %s для получения уведомлений"
-
-#~ msgid "User can enter the Telegram information on %sprofile%s page"
-#~ msgstr ""
-#~ "Пользователь может ввести информацию телеграм на странице %sпрофиля%s"
-
-#~ msgid "Your host seems to block requests to %s"
-#~ msgstr "Ваш хост блокирует запросы %s"

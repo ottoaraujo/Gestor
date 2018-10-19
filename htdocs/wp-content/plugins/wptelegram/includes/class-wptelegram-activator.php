@@ -26,7 +26,7 @@ class WPTelegram_Activator {
 	 * Enables hooks for the activation process.
 	 *
 	 * @since	1.0.0
-	 * @param	bool	$network_wide	Whether the plugin is enabled the for all sites in the network or just the current site
+	 * @param	bool	$network_wide	Whether enabled for all network sites or just the current site
 	 */
 	public static function activate( $network_wide = false ) {
 		do_action( 'wptelegram_activated', $network_wide );

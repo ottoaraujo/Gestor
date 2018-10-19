@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Telegram 1.6.3\n"
-"POT-Creation-Date: 2018-09-23 20:41+0530\n"
-"PO-Revision-Date: 2018-09-23 20:41+0530\n"
+"POT-Creation-Date: 2018-10-08 17:52+0530\n"
+"PO-Revision-Date: 2018-10-08 17:57+0530\n"
 "Last-Translator: \n"
 "Language-Team: WPTelegram\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-KeywordsList: __;_e;_x;esc_attr__;esc_attr_e;esc_html__;esc_html_e\n"
@@ -345,10 +345,6 @@ msgstr "Apenas modelo de mensagem"
 msgid "Miscellaneous"
 msgstr "Diversos"
 
-#: admin/class-wptelegram-admin-settings.php:349
-msgid "of the link in text"
-msgstr "do link no texto"
-
 #: admin/class-wptelegram-admin-settings.php:350
 msgid "Disable Notifications"
 msgstr "Desativar as notificações"
@@ -666,11 +662,11 @@ msgstr "Clique para inserir"
 #: admin/class-wptelegram-admin-settings.php:667
 #, php-format
 msgid ""
-"Replace %s in %s by the name of the taxonomy from which you want to get the "
-"terms attached to the post."
+"Replace %1$s in %2$s by the name of the taxonomy from which you want to get "
+"the terms attached to the post."
 msgstr ""
-"Substitua %s em %s pelo nome da taxonomia a partir da qual você deseja obter "
-"os termos anexados à postagem."
+"Substitua %1$s em %2$s pelo nome da taxonomia a partir da qual você deseja "
+"obter os termos anexados à postagem."
 
 #: admin/class-wptelegram-admin-settings.php:667
 #: admin/class-wptelegram-admin-settings.php:668
@@ -681,11 +677,11 @@ msgstr "Por exemplo %s"
 #: admin/class-wptelegram-admin-settings.php:668
 #, php-format
 msgid ""
-"Replace %s in %s by the name of the Custom Field, the value of which you "
+"Replace %1$s in %2$s by the name of the Custom Field, the value of which you "
 "want to add to the template."
 msgstr ""
-"Substitua %s em %s pelo nome do Campo personalizado, cujo valor você deseja "
-"adicionar ao modelo."
+"Substitua %1$s em %2$s pelo nome do Campo personalizado, cujo valor você "
+"deseja adicionar ao modelo."
 
 #: admin/class-wptelegram-admin-settings.php:769
 msgid "Override default settings"
@@ -866,10 +862,3 @@ msgstr "Digite o chat_id recebido no campo acima"
 #, php-format
 msgid "Also start a conversation with %s to receive notifications"
 msgstr "Também comece uma conversa com %s para receber notificações"
-
-#~ msgid "User can enter the Telegram information on %sprofile%s page"
-#~ msgstr ""
-#~ "O usuário pode inserir as informações do Telegram na página %sprofile%s"
-
-#~ msgid "Your host seems to block requests to %s"
-#~ msgstr "Sua hospedagem parece bloquear pedidos para %s"

@@ -184,6 +184,23 @@ class WPTelegram_Bot_API {
     }
 
     /**
+     * Check if the response is successful
+     *
+     * @return bool
+     */
+    public function is_success( $res = NULL ) {
+
+        if ( empty( $res ) ) {
+            $res = $this->last_response;
+        }
+
+        if ( ! is_wp_error( $res ) && $res instanceof WPTelegram_Bot_API_Response && 200 == $res->get_response_code() ) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
      * Instantiates a new WPTelegram_Bot_API_Request
      *
      * @param string $api_method
